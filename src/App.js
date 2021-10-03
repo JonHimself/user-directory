@@ -3,12 +3,14 @@ import Button from "./components/Button";
 import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import UserDirectory from "./components/UserDirectory";
+import EditForm from "./components/EditForm";
 import api from "./api/persons";
 import "./css/App.css";
 
 function App() {
   const [count, setCount] = useState(0);
   const [persons, setPersons] = useState([]);
+  // const [editBody, setEditBody] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -66,6 +68,20 @@ function App() {
     }
   };
 
+  // handleEdit = async (id) => {
+  //   try {
+  //     await api.put(`/persons/${id}`, editBody);
+  //   } catch (e) {
+  //     if (e.response) {
+  //       console.log(e.response.data);
+  //       console.log(e.response.status);
+  //       console.log(e.response.headers);
+  //     } else {
+  //       console.log(e.message);
+  //     }
+  //   }
+  // };
+
   return (
     <div className="App">
       <Navbar />
@@ -100,6 +116,7 @@ function App() {
           text="Next >"
         ></Button>
       </div>
+      <EditForm persons={persons} />
       <Form persons={persons} />
     </div>
   );
