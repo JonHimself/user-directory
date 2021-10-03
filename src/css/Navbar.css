@@ -1,0 +1,10 @@
+.navbar {
+  background-color: #34a5da;
+  color: #fff;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.navbar h2 {
+  color: #ffffff;
+}

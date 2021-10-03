@@ -1,0 +1,13 @@
+.user-direct {
+  background-color: #fff;
+  max-width: 500px;
+  min-width: 500px;
+  text-align: left;
+  padding: 3rem;
+  margin-top: 4rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
